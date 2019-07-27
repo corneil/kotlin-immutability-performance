@@ -100,6 +100,9 @@ java -jar build/libs/kotlin-immutability-performance-jmh.jar
 # Benchmarks
 
 ## Charts
+
+*Results show operations/second. So higher is better*
+
 ### CompareTo Benchmark
 ![compareTo chart](compareTo.png)
 
