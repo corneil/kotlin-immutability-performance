@@ -1,16 +1,13 @@
 package com.github.corneil.demos
 
-import java.util.*
+import java.util.Date
+import kotlin.random.Random
 
 object EntitySorterSetup {
 	private val mlst1 = mutableListOf<Test1Entity>()
 	private val mlst2 = mutableListOf<Test2Entity>()
 	private val mlst3 = mutableListOf<Test3Entity>()
 	private val rand = Random(42)
-
-	private fun list1(): List<Test1Entity> = mlst1.toList()
-	private fun list2(): List<Test2Entity> = mlst2.toList()
-	private fun list3(): List<Test3Entity> = mlst3.toList()
 
 	fun randString(len: Int): String {
 		val builder = StringBuilder(len)
@@ -37,9 +34,8 @@ object EntitySorterSetup {
 		}
 	}
 
-	val lst1 = list1()
-	val lst2 = list2()
-	val lst3 = list3()
-
+	val lst1 = mlst1.toList()
+	val lst2 = mlst2.toList()
+	val lst3 = mlst3.toList()
 
 }

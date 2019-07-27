@@ -91,6 +91,12 @@ data class Test2Entity(
 
 }
 ```
+
+# Executing
+```bash
+./gradlew jmhJar
+java -jar build/libs/kotlin-immutability-performance-jmh.jar
+```
 # Benchmarks
 
 ## Charts
