@@ -37,22 +37,19 @@ open class EntitySortBenchmark {
 
 	@Benchmark
 	fun testEntity1Benchmark() {
-		val testList = mutableListOf<Test1Entity>()
-		testList.addAll(EntitySorterSetup.lst1)
+		val testList = EntitySorterSetup.lst1.toMutableList()
 		testList.sort()
 	}
 
 	@Benchmark
 	fun testEntity2Benchmark() {
-		val testList = mutableListOf<Test2Entity>()
-		testList.addAll(EntitySorterSetup.lst2)
+		val testList = EntitySorterSetup.lst2.toMutableList()
 		testList.sort()
 	}
 
 	@Benchmark
 	fun testEntity3Benchmark() {
-		val testList = mutableListOf<Test3Entity>()
-		testList.addAll(EntitySorterSetup.lst3)
+		val testList = EntitySorterSetup.lst3.toMutableList()
 		testList.sort()
 	}
 }
