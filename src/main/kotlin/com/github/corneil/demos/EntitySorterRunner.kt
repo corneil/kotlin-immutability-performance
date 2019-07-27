@@ -38,8 +38,7 @@ fun <T : Comparable<T>> sortEntity(milliseconds: Long, lst: List<T>): Double {
 	val startTime = System.currentTimeMillis()
 	var iterations = 0
 	while (currentTimeMillis() - startTime < milliseconds) {
-		val testList = mutableListOf<T>()
-		testList.addAll(lst)
+		val testList = lst.toMutableList<T>()
 		testList.sort()
 		iterations += 1
 	}

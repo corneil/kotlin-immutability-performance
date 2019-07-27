@@ -91,7 +91,31 @@ data class Test2Entity(
 
 }
 ```
+## Benchmarks
 
+### JDK 1.8.0_222
+```
+Benchmark                                  Mode  Cnt          Score          Error  Units
+EntitySortBenchmark.testCompareTo1        thrpt    5  152486824.222 ±  1039186.014  ops/s
+EntitySortBenchmark.testCompareTo2        thrpt    5  129070695.342 ± 60250933.000  ops/s
+EntitySortBenchmark.testCompareTo3        thrpt    5   33101647.521 ±  8241812.349  ops/s
+EntitySortBenchmark.testEntity1Benchmark  thrpt    5       7944.836 ±      728.992  ops/s
+EntitySortBenchmark.testEntity2Benchmark  thrpt    5       7398.933 ±      439.550  ops/s
+EntitySortBenchmark.testEntity3Benchmark  thrpt    5       3307.690 ±       81.216  ops/s
+```
+
+### JDK 11.0.4
+```
+Benchmark                                  Mode  Cnt          Score         Error  Units
+EntitySortBenchmark.testCompareTo1        thrpt    5  151576731.279 ± 1512631.692  ops/s
+EntitySortBenchmark.testCompareTo2        thrpt    5  133113256.894 ± 2034327.058  ops/s
+EntitySortBenchmark.testCompareTo3        thrpt    5   41435061.844 ± 1109035.074  ops/s
+EntitySortBenchmark.testEntity1Benchmark  thrpt    5       6823.694 ±     240.065  ops/s
+EntitySortBenchmark.testEntity2Benchmark  thrpt    5       5690.632 ±    2288.121  ops/s
+EntitySortBenchmark.testEntity3Benchmark  thrpt    5       3247.631 ±     150.242  ops/s
+```
+
+### JDK 12.0.2
 ```
 Benchmark                                  Mode  Cnt          Score         Error  Units
 EntitySortBenchmark.testCompareTo1        thrpt    5  153702052.915 ± 1894629.525  ops/s
@@ -100,4 +124,15 @@ EntitySortBenchmark.testCompareTo3        thrpt    5   39224254.427 ± 1146574.9
 EntitySortBenchmark.testEntity1Benchmark  thrpt    5       6760.718 ±     349.851  ops/s
 EntitySortBenchmark.testEntity2Benchmark  thrpt    5       6310.201 ±      90.302  ops/s
 EntitySortBenchmark.testEntity3Benchmark  thrpt    5       2957.105 ±     133.031  ops/s
+```
+
+### JDK Graal VM 19.1.1
+```
+Benchmark                                  Mode  Cnt          Score          Error  Units
+EntitySortBenchmark.testCompareTo1        thrpt    5  172002382.341 ±  3085169.726  ops/s
+EntitySortBenchmark.testCompareTo2        thrpt    5  160855617.765 ±  4376920.422  ops/s
+EntitySortBenchmark.testCompareTo3        thrpt    5  150741976.746 ± 20359301.136  ops/s
+EntitySortBenchmark.testEntity1Benchmark  thrpt    5       7713.891 ±      497.388  ops/s
+EntitySortBenchmark.testEntity2Benchmark  thrpt    5       7563.076 ±      757.518  ops/s
+EntitySortBenchmark.testEntity3Benchmark  thrpt    5       7966.877 ±      193.780  ops/s
 ```
