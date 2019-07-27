@@ -91,8 +91,17 @@ data class Test2Entity(
 
 }
 ```
-## Benchmarks
+# Benchmarks
 
+## Charts
+### CompareTo Benchmark
+![compareTo chart](compareTo.png)
+
+### Sorting Benchmark
+![sort chart](sort.png)
+
+
+## Raw results
 ### JDK 1.8.0_222
 ```
 Benchmark                                  Mode  Cnt          Score          Error  Units
@@ -137,9 +146,3 @@ EntitySortBenchmark.testEntity2Benchmark  thrpt    5       7563.076 ±      757.
 EntitySortBenchmark.testEntity3Benchmark  thrpt    5       7966.877 ±      193.780  ops/s
 ```
 
-## Charts
-### CompareTo Benchmark
-![compareTo chart](compareTo.png)
-
-### Sorting Benchmark
-![sort chart](sort.png)
