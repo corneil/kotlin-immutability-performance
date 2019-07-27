@@ -136,3 +136,10 @@ EntitySortBenchmark.testEntity1Benchmark  thrpt    5       7713.891 ±      497.
 EntitySortBenchmark.testEntity2Benchmark  thrpt    5       7563.076 ±      757.518  ops/s
 EntitySortBenchmark.testEntity3Benchmark  thrpt    5       7966.877 ±      193.780  ops/s
 ```
+
+## Charts
+### CompareTo Benchmark
+![compareTo chart](compareTo.png)
+
+### Sorting Benchmark
+![sort chart](sort.png)
