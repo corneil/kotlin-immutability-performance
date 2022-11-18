@@ -8,8 +8,9 @@ object EntitySorter {
 	@JvmStatic
 	fun main(args: Array<String>) {
 		val version = System.getProperty("java.version")
-		println("Starting...${version}")
-		val executTime: Long = 10 * 1000
+		val kotlinVersion = KotlinVersion.CURRENT
+		println("Starting...Java:${version}, Kotlin:${kotlinVersion}")
+		val executTime = if(args.isNotEmpty()) args[0].toLong() else 10 * 1000
 		println("Sort Entity1")
 		val ips1 = sortEntity(executTime, EntitySorterSetup.lst1)
 		if (ips1 < 1.0) {
@@ -38,7 +39,7 @@ fun <T : Comparable<T>> sortEntity(milliseconds: Long, lst: List<T>): Double {
 	val startTime = System.currentTimeMillis()
 	var iterations = 0
 	while (currentTimeMillis() - startTime < milliseconds) {
-		val testList = lst.toMutableList<T>()
+		val testList = lst.toMutableList()
 		testList.sort()
 		iterations += 1
 	}

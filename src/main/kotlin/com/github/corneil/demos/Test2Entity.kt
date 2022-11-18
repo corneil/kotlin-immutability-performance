@@ -2,7 +2,7 @@ package com.github.corneil.demos
 
 import java.util.*
 
-inline fun <T> T.ifZero(exp: Int, block: () -> Int): Int = if (exp == 0) block() else exp
+inline fun ifZero(exp: Int, block: () -> Int): Int = if (exp == 0) block() else exp
 
 data class Test2Entity(
 		val field1: String,

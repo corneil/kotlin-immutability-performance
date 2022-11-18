@@ -28,7 +28,7 @@ object EntitySorterSetup {
 		val t3 = Test3Entity(f1, f2, f3, d1, Date())
 		for (i in 0..999) {
 			val d2 = Date(rand.nextLong())
-			mlst1.add(t1.copy(date2 = d2))
+			mlst1.add(Test1Entity(t1.field1, t1.field2,t1.field3, t1.date1, d2))
 			mlst2.add(t2.copy(date2 = d2))
 			mlst3.add(t3.copy(date2 = d2))
 		}
